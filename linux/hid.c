@@ -459,7 +459,7 @@ void  HID_API_EXPORT hid_free_enumeration(struct hid_device_info *devs)
 	}
 }
 
-hid_device * hid_open(unsigned short vendor_id, unsigned short product_id, wchar_t *serial_number)
+HID_API_EXPORT hid_device * HID_API_CALL hid_open(unsigned short vendor_id, unsigned short product_id, const wchar_t *serial_number)
 {
 	struct hid_device_info *devs, *cur_dev;
 	const char *path_to_open = NULL;
